@@ -721,6 +721,14 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
     
     });
     }
+	
+if (text.includes(".spotify")){
+  const spotify = text.split(".spotify")[1]
+  axios.get(`https://api.spotify.com/play?link=${spotify}`).then ((res) =>
+    { let hasil = `${res.data.link}`
+    conn.sendMessage(id, hasil, MessageType.text)
+  })
+}
 
 if (text.includes("#randomanime"))
    {
