@@ -49,7 +49,7 @@ conn.on('qr', qr =>
    {
       small: true
    });
-   console.log(`[ ${moment().format("HH:mm:ss")} ] AR15BOT Ready scan now!`);
+   console.log(`[ ${moment().format("HH:mm:ss")} ] ridho Ready scan now!`);
 });
 
 conn.on('credentials-updated', () =>
