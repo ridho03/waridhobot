@@ -203,7 +203,22 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/twit?url=${teks}&apiKey=zFuV88p
   conn.sendMessage(id, hasil, MessageType.text);
 })
 }
-	
+if (text.includes("#chord")){
+const teks = text.replace(/#chord /, "")
+axios.get(`https://st4rz.herokuapp.com/api/chord?q=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
+    let hasil = `*Nih Cord Lagu ${teks} kak* \n\nCord: _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("#namaninja")){
+const teks = text.replace(/#namaninja /, "")
+axios.get(`https://api.terhambar.com/ninja?nama=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = `Nama Ninja kamu🙂:\n\n${res.message.data.result}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}	
 if (text.includes("#wiki")){
 const teks = text.replace(/#wiki /, "")
 axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
@@ -582,7 +597,28 @@ axios.get(`https://api.terhambar.com/ninja?nama=${teks}`).then((res) => {
                conn.sendMessage(id, pantun, MessageType.text)
             });
       }
-           
+      if (text.includes("#quotes"))
+   {
+      var url = 'https://jagokata.com/kata-bijak/acak.html'
+      axios.get(url)
+         .then((result) =>
+         {
+            let $ = cheerio.load(result.data);
+            var author = $('a[class="auteurfbnaam"]').contents().first().text();
+            var kata = $('q[class="fbquote"]').contents().first().text();
+
+            conn.sendMessage(
+               id,
+               `
+_${kata}_
+        
+    
+	*~${author}*
+         `, MessageType.text
+            );
+
+         });
+   }     
 /*   if (text.includes("#yt"))
    {
       const url = text.replace(/#yt/, "");
