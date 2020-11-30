@@ -72,11 +72,11 @@ fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
 //conn.connectOptions.agent = ProxyAgent ('http://1.0.180.120:8080')
 conn.connect();
 
-conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @Official.kingdoom`))
+conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @ridho_setiawan02`))
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @Official.kingdoom`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @ridho_setiawan02`)
 })
 
 conn.on('message-new', async(m) =>
@@ -144,10 +144,7 @@ else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw' ,MessageType.text);
 }
 else if (text == '.owner'){
-conn.sendMessage(id, 'Owner AR15BOT wa.me/+6285722553839' ,MessageType.text);
-}
-else if (text == 'Aris'){
-conn.sendMessage(id, 'Aku BOT nya Aris187 ID' ,MessageType.text);
+conn.sendMessage(id, 'Owner ridho wa.me/6281289096745' ,MessageType.text);
 }
 else if (text == 'Ngentod'){
 conn.sendMessage(id, 'Pengin ngentod?' ,MessageType.text);
