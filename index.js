@@ -11,15 +11,7 @@ const imageToBase64 = require('image-to-base64');
 const menu = require("./lib/menu.js");
 const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
-const setting = require("./settings/setting.json");
-
-let { 
-    ownerNumber, 
-    groupLimit, 
-    memberLimit,
-} = setting
-
-					  
+				  
 //
 const BotName = 'RIDHO BOT 🤖'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/ridho_setiawan02'; // Nama Instagramlu cok
