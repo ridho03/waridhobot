@@ -13,7 +13,7 @@ const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 				  
 //
-const BotName = 'RIDHO BOT 🤖'; // Nama Bot Whatsapp
+const BotName = 'ACHILLBOYY BOT 🤖'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/ridho_setiawan02'; // Nama Instagramlu cok
 const whatsapplu = '0812-8909-6745'; // Nomor whatsapplu cok
 const kapanbotaktif = '24 Jam'; // Kapan bot lu aktif
