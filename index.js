@@ -13,9 +13,9 @@ const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 				  
 //
-const BotName = 'RIDHO BOT 🤖'; // Nama Bot Whatsapp
+const BotName = 'achill bot 🤖'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/ridho_setiawan02'; // Nama Instagramlu cok
-const whatsapplu = '0812-8909-6745'; // Nomor whatsapplu cok
+const whatsapplu = '0813-1610-5119'; // Nomor whatsapplu cok
 const kapanbotaktif = '24 Jam'; // Kapan bot lu aktif
 const grupch1 = 'https://chat.whatsapp.com/LX1nAiZUuB5FmTCMwe0o4g'; // OFFICIAL GRUP LU 1
 const grupch2 = 'https://chat.whatsapp.com/Kjv5IWzNIeCBSaH4lJKX8v'; // OFFICIAL GRUP LU 2
