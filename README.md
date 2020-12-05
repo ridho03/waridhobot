@@ -47,6 +47,8 @@ Sebelum lu jalanin sc nya install dulu lah.
 
 ## Special Thanks to
 * [`termux-whatsapp-bot`](https://github.com/fdciabdul/termux-whatsapp-bot)
+[`ST4RZ`](https://github.com/Bintang73)
+[`ARIS187 ID`](https://github.com/A187ID)
 
 ### Donate
 * DANA/PULSA  081289096745
