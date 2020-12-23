@@ -311,14 +311,14 @@ conn.sendMessage(id, titoe, MessageType.text);
 }
 
 if (text.includes('.hidetag')){
-var value = text.replace(text.split(' ')[0], '')
-var group = await conn.groupMetadata(id)
-var member = group['participants']
-var ids = []
+const value = text.replace(text.split(' ')[0], '')
+const group = await conn.groupMetadata(id)
+const member = group['participants']
+const ids = []
 member.map( async adm => {
     ids.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-var options = {
+const options = {
     text: value,
     contextInfo: { mentionedJid: ids },
     quoted: m
