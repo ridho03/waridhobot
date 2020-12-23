@@ -13,6 +13,7 @@ const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 				  
 //
+const pit = '```'
 const BotName = 'RIDHO BOT 🤖'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/ridho_setiawan02'; // Nama Instagramlu cok
 const whatsapplu = '0812-8909-6745'; // Nomor whatsapplu cok
@@ -309,6 +310,23 @@ conn.sendMessage(id, titoe, MessageType.text);
 })
 }
 
+if (text.includes('.hidetag')){
+var value = text.replace(text.split(' ')[0], '')
+var group = await conn.groupMetadata(id)
+var member = group['participants']
+var ids = []
+member.map( async adm => {
+    ids.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+var options = {
+    text: value,
+    contextInfo: { mentionedJid: ids },
+    quoted: m
+}
+if (!isAdmin) conn.sendMessage(id, 'Ini Cuma Untuk Owner! Awokawok', MessageType.text, { quoted: m })
+else conn.sendMessage(id, options, MessageType.text)
+}
+	
 if (text.includes(".fb")){
 const teks = text.replace(/.fb /, "")
 axios.get(`http://scrap.terhambar.com/fb?link=${teks}`).then((res) => {
