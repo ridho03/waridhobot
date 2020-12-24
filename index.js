@@ -323,8 +323,7 @@ const options = {
     contextInfo: { mentionedJid: ids },
     quoted: m
 }
-if (!isAdmin) conn.sendMessage(id, 'Ini Cuma Untuk Owner! Awokawok', MessageType.text, { quoted: m })
-else conn.sendMessage(id, options, MessageType.text)
+conn.sendMessage(id, options, MessageType.text)
 }
 	
 if (text.includes(".fb")){
