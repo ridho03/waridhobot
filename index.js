@@ -309,7 +309,7 @@ conn.sendMessage(id, titoe, MessageType.text);
 })
 }
 
-if (text.includes('.hidetag')){
+if (text.includes('.hai')){
 const value = text.replace(text.split(' ')[0], '')
 const group = await conn.groupMetadata(id)
 const member = group['participants']
